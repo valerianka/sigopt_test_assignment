@@ -19,6 +19,7 @@ aws_access_key_id = <your_access_key_here>
 aws_secret_access_key = <your_secret_key_here>
 ```
 In the AWS web console create security group named 'default-ssh' and add a rule allowing for inbound traffic from your IP via SSH.
+
 Run
 -----------------------------------------------------
 In the terminal enter command 
@@ -42,6 +43,7 @@ Example:
 python master.py --path_to_private_key /Users/Michael/.ssh/my_key.pem --num_observations 50 --v
 ```
 To read information on different flag usage run *python master.py --help* in the terminal.
+
 Troubleshooting
 ----------------------------------------------------
 If your number of running instances exceeds the number of opened suggestions in your SigOpt plan, you'll see error message in the terminal. This happens because evaluations are performed concurrently on all machines and in order to do it we're requesting the same amount of suggestions as the number of machines. 
